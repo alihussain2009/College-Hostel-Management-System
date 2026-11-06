@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelHub | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body data-page="dashboard">
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">H</span>
+                <span>Hostel<span class="brand-light">Hub</span></span>
+            </a>
+
+            <p class="side-label">MAIN MENU</p>
+
+            <nav class="nav-menu">
+                <a class="nav-link active" href="index.html">
+                    <span class="nav-icon">▦</span> Dashboard
+                </a>
+
+                <a class="nav-link" href="students.html">
+                    <span class="nav-icon">♙</span> Students
+                </a>
+
+                <a class="nav-link" href="rooms.html">
+                    <span class="nav-icon">▤</span> Rooms
+                </a>
+
+                <a class="nav-link" href="allocation.html">
+                    <span class="nav-icon">⇄</span> Allocations
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">?</div>
+                    <strong>Need help?</strong>
+                    <p>Manage hostel records from one place.</p>
+                </div>
+
+                <div class="side-footer">
+                    College Hostel Management
+                    <br>
+                    <span>Management Portal</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h1>Dashboard</h1>
+                    <p class="page-subtitle">
+                        Welcome back. Here's what's happening in your hostel.
+                    </p>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="today-date" id="todayDate"></span>
+                    <div class="avatar">A</div>
+                </div>
+
+            </header>
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Total Students</span>
+                        <span class="stat-icon blue">♙</span>
+                    </div>
+                    <strong id="totalStudents">0</strong>
+                    <small>Registered students</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Total Rooms</span>
+                        <span class="stat-icon violet">▤</span>
+                    </div>
+                    <strong id="totalRooms">0</strong>
+                    <small>Rooms in the hostel</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Occupied Beds</span>
+                        <span class="stat-icon orange">⌂</span>
+                    </div>
+                    <strong id="occupiedBeds">0</strong>
+                    <small>Currently allocated</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Available Beds</span>
+                        <span class="stat-icon green">✓</span>
+                    </div>
+                    <strong id="availableBeds">0</strong>
+                    <small>Beds ready for allocation</small>
+                </article>
+
+            </section>
+
+            <section class="content-grid">
+
+                <article class="panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Recent Allocations</h2>
+                            <p>Latest student room assignments</p>
+                        </div>
+
+                        <a class="text-link" href="allocation.html">
+                            View all →
+                        </a>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>STUDENT</th>
+                                    <th>ROOM</th>
+                                    <th>DATE</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recentAllocations">
+                                <tr>
+                                    <td colspan="4" class="empty-cell">
+                                        No allocations found yet.
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </article>
+
+                <article class="panel quick-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Common management tasks</p>
+                        </div>
+                    </div>
+
+                    <a class="quick-action" href="students.html">
+                        <span class="quick-icon blue">＋</span>
+                        <span>
+                            <strong>Add Student</strong>
+                            <small>Register a new student</small>
+                        </span>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+                    <a class="quick-action" href="rooms.html">
+                        <span class="quick-icon violet">▤</span>
+                        <span>
+                            <strong>Add Room</strong>
+                            <small>Create a room record</small>
+                        </span>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+                    <a class="quick-action" href="allocation.html">
+                        <span class="quick-icon green">⇄</span>
+                        <span>
+                            <strong>Allocate Room</strong>
+                            <small>Assign a student to a room</small>
+                        </span>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+                </article>
+
+            </section>
+
+            <footer class="page-footer">
+                © <span id="yearNow"></span> College Hostel Management System
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
